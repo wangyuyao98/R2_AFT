@@ -1,10 +1,3 @@
-# Code for implementing the R2 measure for AFT models
-
-rm(list = ls())  # remove everything in the working environment
-setwd(dirname(rstudioapi::getSourceEditorContext()$path))  # set working directory to the directory where this file is
-
-library(survival)
-
 # ----------------------------------------------------------------------------------
 # Function for implementing the R2 measure for AFT model 
 # ----------------------------------------------------------------------------------
@@ -33,19 +26,5 @@ R2_AFT <- function(fit.AFT, data){
     return(R2)
 }
 # End of the function --------------------------------------------------------------
-
-
-
-
-# ----------------------------------------------------------------------------------
-### Code for fitting an AFT model using survreg() and compute the R2 measure
-### Use the 'ovarian' data set from the 'survival' R package as an illustration.
-
-# fit the AFR model
-fit.AFT = survreg(Surv(futime, fustat) ~ ecog.ps + rx, ovarian, dist='weibull')  
-# you may choose other distribution, see the R document for surveg() for more details
-
-
-R2_AFT(fit.AFT, ovarian)
 
 
