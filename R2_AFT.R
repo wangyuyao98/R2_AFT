@@ -39,7 +39,7 @@ R2_AFT <- function(fit.AFT, data){
 
 # ----------------------------------------------------------------------------------
 ### Code for fitting an AFT model using survreg() and compute the R2 measure
-### Use the 'ovarian' data set from the 'survival' package as an illustration
+### Use the 'ovarian' data set from the 'survival' R package as an illustration.
 
 # fit the AFR model
 fit.AFT = survreg(Surv(futime, fustat) ~ ecog.ps + rx, ovarian, dist='weibull')  
