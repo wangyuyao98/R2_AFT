@@ -14,7 +14,7 @@ The R script `main.R` contains the main code for fitting an AFT model and comput
 ### Arguments
 |Arguments| Description|
 |--- | --- |
-| fit.AFT | result of a model fit using the survreg function |
+| fit.AFT | result of a model fit using the `survreg()` function |
 | data |data used to get the model fit ‘fit.AFT’| 
  
 ### Output value
