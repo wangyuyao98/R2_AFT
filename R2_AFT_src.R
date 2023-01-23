@@ -3,8 +3,6 @@
 # ----------------------------------------------------------------------------------
 # Input arguments:
 ##   fit.AFT: a survreg object from fitting an AFT model using survreg()
-##   data: the data frame used to obtain the fitted object fit.AFT
-# Output: the R2 measure
 R2_AFT <- function(fit.AFT){
     dist = fit.AFT$dist
     sigma = fit.AFT$scale
