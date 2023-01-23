@@ -17,3 +17,5 @@ fit.AFT = survreg(Surv(futime, fustat) ~ ecog.ps + rx, ovarian, dist='weibull')
 R2_AFT(fit.AFT, ovarian)
 
 
+
+

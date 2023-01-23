@@ -5,13 +5,11 @@
 ##   fit.AFT: a survreg object from fitting an AFT model using survreg()
 ##   data: the data frame used to obtain the fitted object fit.AFT
 # Output: the R2 measure
-R2_AFT <- function(fit.AFT, data){
+R2_AFT <- function(fit.AFT){
     dist = fit.AFT$dist
     sigma = fit.AFT$scale
     
-    beta = coef(fit.AFT)[-1]
-    Z = as.matrix(data[, names(beta)])
-    var_Zbeta = var(as.vector(beta%*%t(Z)))
+    var_Zbeta = var(fit.AFT$linear.predictors)
     
     if(dist == "logistic" | dist == "loglogistic"){
         var_epsilon = pi^2/3
