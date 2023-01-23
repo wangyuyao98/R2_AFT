@@ -9,7 +9,7 @@ The R script `main.R` contains the main code for fitting an AFT model and comput
 
 ## Usuage of the function `R2_AFT()`
 
-`R2_AFT(fit.AFT, data)`
+`R2_AFT(fit.AFT)`
 
 ### Arguments
 |Arguments| Description|
