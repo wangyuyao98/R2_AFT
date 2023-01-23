@@ -14,7 +14,7 @@ fit.AFT = survreg(Surv(futime, fustat) ~ ecog.ps + rx, ovarian, dist='weibull')
 
 
 # compute the R2 measure
-R2_AFT(fit.AFT, ovarian)
+R2_AFT(fit.AFT)
 
 
 
